@@ -8,10 +8,11 @@ export async function apiFetch<T = unknown>(
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${path}`, {
         ...options,
         headers: {
+            Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
-            ...(token ? { Authorization: `Bearer ${token}` } : {}),
             ...options.headers,
         },
+        cache: 'no-store',
     })
 
     if (!res.ok) {

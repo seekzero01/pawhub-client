@@ -12,16 +12,16 @@ function PawIcon({ className }: { className?: string }) {
 
 export function AuthCard({ children, title, subtitle }: { children: ReactNode; title: string; subtitle: string }) {
     return (
-        <div className="flex min-h-screen items-center justify-center bg-neutral-50">
-            <div className="w-full max-w-md space-y-6 rounded-2xl bg-white p-8 shadow-sm">
+        <div className="flex min-h-100vh items-center justify-center">
+            <div className="w-full max-w-md space-y-6 rounded-2xl bg-white p-8">
                     <div className="flex flex-col items-center">
                         <div className="h-12 w-12 rounded-xl bg-yellow-200 flex items-center justify-center mb-4">
                             <PawIcon className="w-6 h-6 text-yellow-700" />
                         </div>
-                        <h1 className="text-2xl font-semibold text-center">
+                        <h1 className="text-[22px] font-semibold text-center leading-6">
                             {title}
                         </h1>
-                        <p className="text-xl text-neutral-500 font-semibold">
+                        <p className="text-[22px] text-neutral-500 font-semibold">
                             {subtitle}
                         </p>
                     </div>
