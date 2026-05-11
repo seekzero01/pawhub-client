@@ -11,22 +11,22 @@ export function AuthFooter({ mode }: AuthFooterProps) {
     const isLogin = mode === 'login'
 
     return (
-        <div className="space-y-4">
-            <p className="text-center text-sm text-neutral-500">
+        <div className="space-y-4 font-inter">
+            <p className="text-center text-body leading-body tracking-body text-graphite-text">
                 {isLogin ? "New user? " : "Existing user? "}
                 <Link
                     href={isLogin ? "/auth/signup" : "/auth/login"}
-                    className="underline cursor-pointer"
+                    className="text-graphite-text font-semibold underline underline-offset-2 cursor-pointer"
                 >
                     {isLogin ? "Sign up" : "Log in"}
                 </Link>
             </p>
 
-            <p className="text-xs text-neutral-400 text-center px-4">
+            <p className="text-caption text-deep-plum text-center px-4">
                 By continuing, you acknowledge that you understand and agree to the{" "}
-                <span className="underline cursor-pointer text-neutral-500">Terms & Conditions</span>{" "}
+                <span className="underline cursor-pointer font-semibold">Terms & Conditions</span>{" "}
                 and{" "}
-                <span className="underline cursor-pointer text-neutral-500">Privacy Policy</span>
+                <span className="underline cursor-pointer font-semibold">Privacy Policy</span>
             </p>
         </div>
     )

@@ -3,11 +3,7 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import {ClerkProvider} from "@clerk/nextjs";
 import {ReactNode} from "react";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-})
+import {inter, playfairDisplay} from "@/src/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,10 +18,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} h-full antialiased`}
+      className={`${inter.className} ${playfairDisplay.className} h-full antialiased`}
     >
       <body className="bg-white min-h-full flex flex-col items-center justify-center">
-      <ClerkProvider pub waitlistUrl="/waitlist" afterSignOutUrl="/auth/login">
+      <ClerkProvider waitlistUrl="/waitlist" afterSignOutUrl="/login">
         {children}
       </ClerkProvider>
       </body>

@@ -11,8 +11,8 @@ export default function Page() {
     const router = useRouter()
     const hasRun = useRef(false)
 
-    const navigateToSignIn = () => router.push('/auth/login')
-    const navigateToSignUp = () => router.push('/auth/signup')
+    const navigateToSignIn = () => router.push('/login')
+    const navigateToSignUp = () => router.push('/signup')
 
     const finalizeSignIn = async () => {
         await signIn.finalize({

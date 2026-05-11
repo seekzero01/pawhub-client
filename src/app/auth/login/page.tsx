@@ -14,7 +14,6 @@ export default function Page() {
         signIn,
         errors,
         fetchStatus,
-        lastStrategy,
         isVerifying,
         isComplete,
         handleSubmit,
@@ -39,9 +38,9 @@ export default function Page() {
     }
 
     return (
-        <AuthCard title="Your AI pet companion" subtitle="Log in with your personal email">
+        <AuthCard title="PawHub" subtitle="Log in to your account">
                 <AuthForm handleSubmit={handleSubmit} fetchStatus={fetchStatus} errors={errors} />
-                <OAuthGrid signUpWithAction={signInWith} lastStrategy={lastStrategy} />
+                <OAuthGrid signUpWithAction={signInWith} />
                 <VetButton />
                 <AuthFooter mode="login" />
         </AuthCard>

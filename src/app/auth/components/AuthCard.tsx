@@ -1,32 +1,39 @@
 'use client'
 
-import React, {ReactNode} from "react";
+import {ReactNode} from "react";
 
-function PawIcon({ className }: { className?: string }) {
-    return (
-        <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2C9.8 2 8 3.8 8 6s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM5.5 7C4.1 7 3 8.1 3 9.5S4.1 12 5.5 12 8 10.9 8 9.5 6.9 7 5.5 7zm13 0C17.1 7 16 8.1 16 9.5S17.1 12 18.5 12 21 10.9 21 9.5 19.9 7 18.5 7zM12 13c-4.4 0-8 2.7-8 5.5V20h16v-1.5c0-2.8-3.6-5.5-8-5.5z" />
-        </svg>
-    )
+interface AuthCardProps {
+    title: string
+    subtitle?: string
+    children: ReactNode
 }
 
-export function AuthCard({ children, title, subtitle }: { children: ReactNode; title: string; subtitle: string }) {
+export function AuthCard({ title, subtitle, children }: AuthCardProps) {
     return (
-        <div className="flex min-h-100vh items-center justify-center">
-            <div className="w-full max-w-md space-y-6 rounded-2xl bg-white p-8">
-                    <div className="flex flex-col items-center">
-                        <div className="h-12 w-12 rounded-xl bg-yellow-200 flex items-center justify-center mb-4">
-                            <PawIcon className="w-6 h-6 text-yellow-700" />
+        <div className="w-full min-h-screen bg-cloud-canvas flex items-center justify-center">
+                <div className="max-w-md bg-porcelain-surface rounded-3xl shadow-md px-10 py-10 flex flex-col gap-6">
+                    <div className="flex flex-col items-center gap-1 text-center">
+                        <div className="flex items-center gap-2">
+                            <span className="font-playfair-display text-heading font-semibold text-amethyst-accent leading-none tracking-tight">
+                                PawHub
+                            </span>
                         </div>
-                        <h1 className="text-[22px] font-semibold text-center leading-6">
-                            {title}
-                        </h1>
-                        <p className="text-[22px] text-neutral-500 font-semibold">
-                            {subtitle}
-                        </p>
+                        {title !== 'PawHub' && (
+                            <p className="font-inter text-subheading leading-subheading tracking-subheading text-graphite-text mt-1">
+                                {title}
+                            </p>
+                        )}
+                        {subtitle && (
+                            <p className="font-inter text-body leading-body tracking-body text-graphite-text mt-0.5">
+                                {subtitle}
+                            </p>
+                        )}
                     </div>
-                {children}
-            </div>
+
+                    <div className="flex flex-col gap-5">
+                        {children}
+                    </div>
+                </div>
         </div>
     )
 }

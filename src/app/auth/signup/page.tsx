@@ -37,7 +37,7 @@ export default function Page() {
     }
 
     return (
-        <AuthCard title="PawHub: your AI pet companion" subtitle="Sign up with your personal email">
+        <AuthCard title="PawHub" subtitle="Sign up with your personal email">
             <AuthForm handleSubmit={handleSubmit} fetchStatus={fetchStatus} errors={errors} />
             <OAuthGrid signUpWithAction={signUpWith} />
             <VetButton />

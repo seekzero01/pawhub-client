@@ -1,6 +1,6 @@
 'use client'
 
-import {useAuth, useClerk, useSignIn} from '@clerk/nextjs'
+import {useAuth, useSignIn} from '@clerk/nextjs'
 import { useRouter } from 'next/navigation'
 import { OAuthStrategy } from '@clerk/shared/types'
 
@@ -8,10 +8,7 @@ export function useLogInFlow() {
     const { signIn, errors, fetchStatus } = useSignIn()
     const { isSignedIn } = useAuth()
 
-    const { client } = useClerk()
     const router = useRouter()
-
-    const lastStrategy = client?.lastAuthenticationStrategy
 
     const finalizeAuth = async () => {
         await signIn.finalize({
@@ -63,7 +60,6 @@ export function useLogInFlow() {
         signIn,
         errors,
         fetchStatus,
-        lastStrategy,
         isVerifying,
         isComplete,
         handleSubmit,
