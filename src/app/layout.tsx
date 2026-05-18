@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import {Inter} from "next/font/google";
 import "./globals.css";
-import {ClerkProvider} from "@clerk/nextjs";
 import {ReactNode} from "react";
 import {inter, playfairDisplay} from "@/src/fonts";
+import {UserButton} from "@/src/UserButton";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +21,7 @@ export default function RootLayout({
       className={`${inter.className} ${playfairDisplay.className} h-full antialiased`}
     >
       <body className="bg-white min-h-full flex flex-col items-center justify-center">
-      <ClerkProvider waitlistUrl="/waitlist" afterSignOutUrl="/login">
-        {children}
-      </ClerkProvider>
+      {children}
       </body>
     </html>
   );

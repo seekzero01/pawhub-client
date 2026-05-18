@@ -33,12 +33,11 @@
 'use client'
 
 import React from "react"
-import { OAuthStrategy } from '@clerk/shared/types'
 import { providers } from "@/src/app/auth/data/Data"
 import { OAuthButton } from "@/src/app/auth/components/buttons/OAuthButton"
 
 interface OAuthGridProps {
-    signUpWithAction: (strategy: OAuthStrategy) => Promise<void>
+    signUpWithAction: (strategy: any) => Promise<void>
 }
 
 export function OAuthGrid({ signUpWithAction }: OAuthGridProps) {

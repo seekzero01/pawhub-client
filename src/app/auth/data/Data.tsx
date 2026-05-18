@@ -1,9 +1,8 @@
-import { OAuthStrategy } from '@clerk/shared/types';
 import {ReactNode} from "react";
 import {AppleIcon, FacebookIcon, GoogleIcon} from "@/src/app/auth/components/icons/Icons";
 
 interface OAuthProvider {
-    strategy: OAuthStrategy;
+    strategy: any;
     name: string;
     icon: ReactNode;
 }

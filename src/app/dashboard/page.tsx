@@ -1,37 +1,43 @@
-"use client"
+import {cookies} from "next/headers";
+import {UserButton} from "@/src/UserButton";
 
-import {useAuth} from "@clerk/nextjs";
-import {useEffect, useState} from "react";
-import {apiFetch} from "@/src/lib/api";
-import {SignOutButton} from "@/src/app/auth/components/buttons/SignOutButton";
+async function getServerSession() {
+    const cookieStore = await cookies();
+    const sessionCookie = cookieStore.get("better-auth.session_token");
+    if (!sessionCookie) return null;
+    try {
+        const res = await fetch("http://localhost:3001/users/me", {
+            headers: {
+                Cookie: `better-auth.session_token=${sessionCookie.value}`,
+            },
+            cache: "no-store",
+        });
+        if (!res.ok) return null;
+        return res.json();
+    } catch {
+        return null;
+    }
+}
 
-type DashboardData = { message: string };
-
-export default function DashboardPage() {
-    const { getToken } = useAuth();
-    const [data, setData] = useState<string>("");
-
-    useEffect(() => {
-        const dataFetch = async () => {
-            try {
-                const data = await apiFetch<DashboardData>('/dashboard', getToken);
-                console.log(data);
-                setData(data.message)
-            } catch (e) {
-                setData("pizdec");
-            }
-        }
-
-        dataFetch();
-    }, [getToken]);
+export default async function DashboardPage() {
+    const session = await getServerSession();
+    if (!session) {
+        return (
+            <>
+                <h1>Profile (SSR)</h1>
+                <p>Not authenticated. This was checked on the server.</p>
+                <a href="/auth/login">Sign in</a>
+            </>
+        );
+    }
 
     return (
-        <main className="flex min-h-screen items-center justify-center p-8">
-            <section className="rounded-2xl border bg-card p-8 shadow-sm">
-                <h1 className="mb-4 text-2xl font-semibold tracking-tight">Dashboard</h1>
-                <p className="text-sm text-muted-foreground">{data}</p>
-                <SignOutButton />
-            </section>
-        </main>
+        <>
+            <h1>Dashboard (SSR)</h1>
+            <p>This data was fetched on the <strong>server</strong> by forwarding your
+                cookie to the NestJS backend. No client-side JS needed for this page.</p>
+            <pre>{JSON.stringify(session.user.name, null, 2)}</pre>
+            <UserButton />
+        </>
     );
 }
