@@ -30,8 +30,10 @@
     --tracking-heading: -0.8px;
     --text-heading-lg: 32px;
     --leading-heading-lg: 1.25;
+    --tracking-heading-lg: -1.2px;
     --text-display: 48px;
     --leading-display: 1.3;
+    --tracking-display: -1.6px;
 
     /* Spacing */
     --spacing-8: 8px;

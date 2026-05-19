@@ -24,9 +24,9 @@ export function AuthFooter({ mode }: AuthFooterProps) {
 
             <p className="text-caption text-deep-plum text-center px-4">
                 By continuing, you acknowledge that you understand and agree to the{" "}
-                <Link className="underline cursor-pointer font-semibold" href="/terms">Terms & Conditions</Link>{" "}
+                <Link className="underline cursor-pointer font-semibold" href="/trust/terms">Terms & Conditions</Link>{" "}
                 and{" "}
-                <Link className="underline cursor-pointer font-semibold" href="/privacy">Privacy Policy</Link>
+                <Link className="underline cursor-pointer font-semibold" href="/trust/privacy">Privacy Policy</Link>
             </p>
         </div>
     )

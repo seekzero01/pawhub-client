@@ -2,6 +2,8 @@ import {signIn, signUp} from "@/src/lib/auth-client";
 import {redirect} from "next/navigation";
 import { z } from 'zod'
 
+// TODO: Captcha Cloudflare Turnstile, 2FA authentication, Email verification, Resend Integration, Privacy, Terms
+
 const signUpSchema = z.object({
     email: z.email('Invalid email'),
     password: z.string().min(12, 'Password too short'),

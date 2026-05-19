@@ -3,7 +3,6 @@
 import { AuthCard } from "@/src/app/auth/components/AuthCard";
 import { OAuthGrid } from "@/src/app/auth/components/OAuthGrid";
 import { AuthForm } from "@/src/app/auth/components/forms/AuthForm";
-import { VerificationForm } from "@/src/app/auth/components/forms/VerificationForm";
 import { VetButton } from "@/src/app/auth/components/buttons/VetButton";
 import React, {useActionState} from "react";
 import {AuthFooter} from "@/src/app/auth/components/AuthFooter";
