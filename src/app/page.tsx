@@ -1,7 +1,6 @@
-"use client"
-
+import {authClient} from "@/src/lib/auth-client";
 import {redirect} from "next/navigation";
 
-export default function Page() {
-    redirect("/waitlist");
+export default async function Page() {
+    redirect("/dashboard")
 }
