@@ -10,8 +10,8 @@ export function UserButton() {
     if (!session?.user) {
         return (
             <div>
-                <a href="/auth/login">Sign In</a>{" "}
-                <a href="/auth/signup">Sign Up</a>
+                <a href="/app/(auth)/login">Sign In</a>{" "}
+                <a href="/app/(auth)/signup">Sign Up</a>
             </div>
         );
     }

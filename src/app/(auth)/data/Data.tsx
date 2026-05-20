@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {AppleIcon, FacebookIcon, GoogleIcon} from "@/src/app/auth/components/icons/Icons";
+import {AppleIcon, FacebookIcon, GoogleIcon} from "@/src/app/(auth)/components/icons/Icons";
 
 interface OAuthProvider {
     strategy: any;

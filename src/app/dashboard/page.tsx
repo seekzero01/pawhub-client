@@ -26,7 +26,7 @@ export default async function DashboardPage() {
             <>
                 <h1>Profile (SSR)</h1>
                 <p>Not authenticated. This was checked on the server.</p>
-                <a href="/auth/login">Sign in</a>
+                <a href="/src/app/(auth)/login">Sign in</a>
             </>
         );
     }

@@ -1,4 +1,4 @@
-import {signIn, signUp} from "@/src/lib/auth-client";
+import {signIn, signUp, twoFactor} from "@/src/lib/auth-client";
 import {redirect} from "next/navigation";
 import { z } from 'zod'
 
@@ -60,4 +60,34 @@ export const handleSignIn = async (previousState: unknown, formData: FormData) =
     }
 
     redirect("/dashboard")
+};
+
+export const handleVerifyTotp = async (
+    previousState: unknown,
+    formData: FormData
+) => {
+    const code = formData.get("code") as string;
+
+    const { error } = await twoFactor.verifyTotp({ code });
+
+    if (error) {
+        return { error: error.message ?? "Invalid code. Please try again." };
+    }
+
+    redirect("/dashboard");
+};
+
+export const handleVerifyBackupCode = async (
+    previousState: unknown,
+    formData: FormData
+) => {
+    const code = formData.get("code") as string;
+
+    const { error } = await twoFactor.verifyBackupCode({ code });
+
+    if (error) {
+        return { error: error.message ?? "Invalid backup code. Please try again." };
+    }
+
+    redirect("/dashboard");
 };

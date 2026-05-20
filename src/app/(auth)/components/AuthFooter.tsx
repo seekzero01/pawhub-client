@@ -15,7 +15,7 @@ export function AuthFooter({ mode }: AuthFooterProps) {
             <p className="text-center text-body leading-body tracking-body text-graphite-text">
                 {isLogin ? "New user? " : "Existing user? "}
                 <Link
-                    href={isLogin ? "/auth/signup" : "/auth/login"}
+                    href={isLogin ? "/signup" : "/login"}
                     className="text-graphite-text font-semibold underline underline-offset-2 cursor-pointer"
                 >
                     {isLogin ? "Sign up" : "Log in"}
