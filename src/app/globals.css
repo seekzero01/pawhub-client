@@ -64,3 +64,18 @@
     --shadow-md: rgba(0, 0, 0, 0.04) 0px 8px 16px 0px;
     --shadow-subtle: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
 }
+
+@layer base {
+    :root {
+        --sidebar-background: #f5f2f0;       /* cloud-canvas */
+        --sidebar-foreground: #333333;        /* graphite-text */
+        --sidebar-primary: #333333;           /* graphite-text */
+        --sidebar-primary-foreground: #f5f2f0;
+        --sidebar-accent: #f1ccff33;          /* amethyst-accent / 20 */
+        --sidebar-accent-foreground: #333333; /* graphite-text */
+        --sidebar-border: #d6d6d6;            /* platinum-border */
+        --sidebar-ring: #f1ccff;              /* amethyst-accent */
+        --sidebar-width: 16rem;               /* 256px — matches previous w-64 */
+        --sidebar-width-icon: 4rem;           /* 64px  — matches previous w-16 */
+    }
+}

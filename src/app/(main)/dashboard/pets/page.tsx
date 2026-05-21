@@ -16,7 +16,7 @@ export default async function PetsPage() {
         redirect('/sign-in')
     }
 
-    const pets = await apiFetch<Pet[]>('/pets', getToken)
+    const pets = await apiFetch<Pet[]>('/pet-profile', getToken)
 
     return (
         <div>
