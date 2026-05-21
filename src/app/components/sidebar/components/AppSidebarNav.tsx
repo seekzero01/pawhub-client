@@ -18,7 +18,7 @@ export const AppSidebarNav = () => {
     return (
         <SidebarGroup>
             <SidebarGroupContent>
-                <SidebarMenu className="gap-3.5 group-data-[collapsible=icon]:gap-5 group-data-[collapsible=icon]:items-center">
+                <SidebarMenu className="gap-1.5 group-data-[collapsible=icon]:gap-5 group-data-[collapsible=icon]:items-center">
                     {navItems.map((item) => {
                         const isActive =
                             pathname === item.href ||
@@ -30,7 +30,7 @@ export const AppSidebarNav = () => {
                                     asChild
                                     isActive={isActive}
                                     className={cn(
-                                        "gap-3 rounded-lg py-1.5 font-medium h-fit transition-all duration-150",
+                                        "gap-3 rounded-lg font-medium h-fit transition-all duration-150",
                                         "text-deep-plum hover:bg-platinum-border/20 hover:text-graphite-text",
                                         "data-[active=true]:bg-amethyst-accent/20 data-[active=true]:text-graphite-text",
                                         "group-data-[collapsible=icon]:px-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:bg-transparent group-data-[collapsible=icon]:data-[active=true]:bg-transparent group-data-[collapsible=icon]:hover:bg-transparent"
