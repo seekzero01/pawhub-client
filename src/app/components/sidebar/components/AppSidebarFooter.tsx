@@ -2,11 +2,6 @@
 
 import { SlidersHorizontal, LayoutGrid, Tablet } from "lucide-react";
 import { SidebarFooter, useSidebar } from "@/components/ui/sidebar";
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -36,20 +31,13 @@ export const AppSidebarFooter = () => {
                 )}
             >
                     {footerActions.map(({ icon: Icon, label }) => (
-                        <Tooltip key={label}>
-                            <TooltipTrigger asChild>
-                                <Button
-                                    className="p-0 h-fit w-fit text-deep-plum hover:text-graphite-text transition-colors"
-                                    aria-label={label}
-                                >
-                                    <Icon className="h-4 w-4 p-px" />
-                                </Button>
-                            </TooltipTrigger>
-
-                            <TooltipContent side="top">
-                                {label}
-                            </TooltipContent>
-                        </Tooltip>
+                        <Button
+                            key={label}
+                            className="p-0 h-fit w-fit text-deep-plum hover:text-graphite-text transition-colors"
+                            aria-label={label}
+                        >
+                            <Icon className="h-4 w-4 p-px" />
+                        </Button>
                     ))}
             </div>
 

@@ -16,28 +16,16 @@ export const AppSidebarHeader = () => {
                     Pawhub
                 </span>
             )}
-            <Tooltip>
-                <TooltipTrigger>
-                    <SidebarTrigger
-                        className="p-4 rounded-lg text-deep-plum hover:text-graphite-text hover:bg-platinum-border/30 transition-colors ml-auto"
-                        aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-                    >
-                        {isCollapsed ? (
-                            <PanelLeftOpen className="h-5 w-5 p-px" />
-                        ) : (
-                            <PanelLeftClose className="h-5 w-5 p-px" />
-                        )}
-                    </SidebarTrigger>
-                </TooltipTrigger>
-                <TooltipContent side="left">
-                    {isCollapsed ? (
-                        <span>Open Sidebar</span>
-                    ) : (
-                        <span>Close Sidebar</span>
-                    )}
-                    <Kbd>B</Kbd>
-                </TooltipContent>
-            </Tooltip>
+            <SidebarTrigger
+                className="p-4 rounded-lg text-deep-plum hover:text-graphite-text hover:bg-platinum-border/30 transition-colors ml-auto"
+                aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+            >
+                {isCollapsed ? (
+                    <PanelLeftOpen className="h-5 w-5 p-px" />
+                ) : (
+                    <PanelLeftClose className="h-5 w-5 p-px" />
+                )}
+            </SidebarTrigger>
         </SidebarHeader>
     );
 };
