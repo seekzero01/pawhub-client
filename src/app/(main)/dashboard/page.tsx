@@ -23,21 +23,21 @@ export default async function DashboardPage() {
     const session = await getServerSession();
     if (!session) {
         return (
-            <>
+            <div className="">
                 <h1>Profile (SSR)</h1>
                 <p>Not authenticated. This was checked on the server.</p>
-                <a href="/src/app/(auth)/login">Sign in</a>
-            </>
+                <a href="/login">Sign in</a>
+            </div>
         );
     }
 
     return (
-        <>
+        <div className="p-12">
             <h1>Dashboard (SSR)</h1>
             <p>This data was fetched on the <strong>server</strong> by forwarding your
                 cookie to the NestJS backend. No client-side JS needed for this page.</p>
             <pre>{JSON.stringify(session.user.name, null, 2)}</pre>
             <UserButton />
-        </>
+        </div>
     );
 }

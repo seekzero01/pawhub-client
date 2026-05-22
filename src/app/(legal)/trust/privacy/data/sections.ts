@@ -26,7 +26,7 @@ export const sections: PolicySection[] = [
         content: [
             {
                 type: "paragraph",
-                text: "PawHub collects information about you when you use our services, including when you create an account, add pets, log health records, or interact with our AI vet assistant. We collect information in the following ways:",
+                text: "PawHub collects information about you when you use our services, including when you create an account, add pet-profile, log health records, or interact with our AI vet assistant. We collect information in the following ways:",
             },
             {
                 type: "list",

@@ -62,7 +62,7 @@ export default function TwoFactorPage() {
                 </Button>
 
                 <Link
-                    href="/two-factor/backup"
+                    href="/src/app/(auth)/two-factor/backup"
                     className="text-sm text-muted-foreground hover:text-deep-plum transition-colors duration-150 underline underline-offset-4"
                 >
                     Lost your device? Use a backup code
