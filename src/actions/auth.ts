@@ -1,4 +1,4 @@
-import {signIn, signUp, twoFactor} from "@/src/lib/auth-client";
+import {signIn, signUp, twoFactor} from "@/lib/auth-client";
 import {redirect} from "next/navigation";
 import { z } from 'zod'
 

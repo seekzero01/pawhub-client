@@ -1,12 +1,12 @@
 'use client'
 
-import { AuthCard } from "@/src/app/(auth)/components/AuthCard";
-import { OAuthGrid } from "@/src/app/(auth)/components/OAuthGrid";
-import { AuthForm } from "@/src/app/(auth)/components/forms/AuthForm";
-import { VetButton } from "@/src/app/(auth)/components/buttons/VetButton";
+import { AuthCard } from "@/app/(auth)/components/AuthCard";
+import { OAuthGrid } from "@/app/(auth)/components/OAuthGrid";
+import { AuthForm } from "@/app/(auth)/components/forms/AuthForm";
+import { VetButton } from "@/app/(auth)/components/buttons/VetButton";
 import React, {useActionState} from "react";
-import {AuthFooter} from "@/src/app/(auth)/components/AuthFooter";
-import {handleSignUp} from "@/src/actions/auth";
+import {AuthFooter} from "@/app/(auth)/components/AuthFooter";
+import {handleSignUp} from "@/actions/auth";
 
 export default function Page() {
     const [state, action, isPending] = useActionState(handleSignUp, undefined);

@@ -7,7 +7,7 @@ import {
     InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { Button } from "@/components/ui/button";
-import {handleVerifyTotp} from "@/src/actions/auth";
+import {handleVerifyTotp} from "@/actions/auth";
 import Link from "next/link";
 
 export default function TwoFactorPage() {
@@ -62,7 +62,7 @@ export default function TwoFactorPage() {
                 </Button>
 
                 <Link
-                    href="/src/app/(auth)/two-factor/backup"
+                    href="/two-factor/backup"
                     className="text-sm text-muted-foreground hover:text-deep-plum transition-colors duration-150 underline underline-offset-4"
                 >
                     Lost your device? Use a backup code

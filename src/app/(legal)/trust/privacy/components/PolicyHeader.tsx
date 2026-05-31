@@ -1,5 +1,5 @@
 import { LAST_UPDATED } from "../data/sections";
-import {LegalLabel} from "@/src/app/components/LegalLabel";
+import {LegalLabel} from "@/components/LegalLabel";
 
 export function PolicyHeader() {
     return (

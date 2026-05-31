@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { navItems } from "@/src/app/components/sidebar/data";
+import { navItems } from "@/components/sidebar/data";
 
 export const AppSidebarNav = () => {
     const pathname = usePathname();

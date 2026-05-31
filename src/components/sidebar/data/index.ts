@@ -1,5 +1,5 @@
 import {Bot, CalendarDays, LayoutDashboard, PawPrint, Pill} from "lucide-react";
-import {ChatHistory, NavItem} from "@/src/app/components/sidebar/types";
+import {ChatHistory, NavItem} from "@/components/sidebar/types";
 import { SlidersHorizontal, Tablet } from "lucide-react";
 
 export const navItems: NavItem[] = [

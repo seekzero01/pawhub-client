@@ -33,8 +33,8 @@
 'use client'
 
 import React from "react"
-import { providers } from "@/src/app/(auth)/data/Data"
-import { OAuthButton } from "@/src/app/(auth)/components/buttons/OAuthButton"
+import { providers } from "@/app/(auth)/data/Data"
+import { OAuthButton } from "@/app/(auth)/components/buttons/OAuthButton"
 
 interface OAuthGridProps {
     signUpWithAction: (strategy: any) => Promise<void>
