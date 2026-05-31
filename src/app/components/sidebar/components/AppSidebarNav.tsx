@@ -40,7 +40,7 @@ export const AppSidebarNav = () => {
                                     <Link href={item.href}>
                                         <item.icon
                                             className={cn(
-                                                "h-5 w-5 p-px",
+                                                "size-5 p-px",
                                                 isActive
                                                     ? "text-graphite-text"
                                                     : "text-deep-plum"

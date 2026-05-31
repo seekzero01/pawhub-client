@@ -10,7 +10,7 @@ interface AuthCardProps {
 
 export function AuthCard({ title, subtitle, children }: AuthCardProps) {
     return (
-        <div className="w-full min-h-screen bg-cloud-canvas flex items-center justify-center">
+        <div className="w-full h-full max-h-screen bg-cloud-canvas flex items-center justify-center">
                 <div className="max-w-md bg-porcelain-surface rounded-3xl shadow-md px-10 py-10 flex flex-col gap-6">
                     <div className="flex flex-col items-center gap-1 text-center">
                         <div className="flex items-center gap-2">

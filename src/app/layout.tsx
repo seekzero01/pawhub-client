@@ -2,6 +2,7 @@ import "./globals.css";
 import {TooltipProvider} from "@/components/ui/tooltip";
 import {Metadata} from "next";
 import {inter, playfairDisplay} from "@/src/fonts";
+import {ReactNode} from "react";
 
 export const metadata: Metadata = {
     title: "My Next.js Application",
@@ -11,11 +12,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
                                        children,
                                    }: {
-    children: React.ReactNode;
+    children: ReactNode;
 }) {
     return (
-        <html lang="en" className={`flex min-h-screen bg-cloud-canvas ${inter.className} ${playfairDisplay.className} h-full antialiased`}>
-        <body>
+        <html lang="en" className={`flex bg-cloud-canvas ${inter.className} ${playfairDisplay.className} h-full antialiased`}>
+        <body className="w-full flex items-center justify-center">
         <TooltipProvider>
             {children}
         </TooltipProvider>
