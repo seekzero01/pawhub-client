@@ -28,7 +28,7 @@ export const SettingsDialog = ({
                 <aside className="w-65 shrink-0 bg-cloud-canvas">
                     <SettingsDialogSidebar user={user} />
                 </aside>
-                <main className="mx-auto max-w-3xl w-full p-8">
+                <main className="w-full max-w-4xl mx-auto p-8">
                     <TabsList className="w-full">
                         <TabsContent value="account" className="mt-0 focus-visible:outline-none">
                             <AccountTab user={user}/>

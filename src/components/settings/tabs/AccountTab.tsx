@@ -27,7 +27,7 @@ export default function AccountTab({ user }: AccountTabProps) {
     }
 
     return (
-            <div className="p-6 space-y-10">
+            <div className="px-8 py-6 space-y-10">
                 <div className="flex flex-col justify-center">
                     <div className="mb-6">
                         <h2 className="text-3xl font-bold tracking-tight text-neutral-900 mb-3">
