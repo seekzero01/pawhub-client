@@ -1,7 +1,7 @@
 import "./globals.css";
 import {TooltipProvider} from "@/components/ui/tooltip";
 import {Metadata} from "next";
-import {inter, playfairDisplay} from "@/src/fonts";
+import {inter, playfairDisplay} from "@/fonts";
 import {ReactNode} from "react";
 
 export const metadata: Metadata = {

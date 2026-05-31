@@ -1,12 +1,12 @@
 "use client"
 
 import {Tabs, TabsContent, TabsList} from "@/components/ui/tabs"
-import {SettingsDialogSidebar} from "@/src/app/components/settings/SettingsDialogSidebar";
-import AccountTab from "@/src/app/components/settings/tabs/AccountTab";
-import GeneralTab from "@/src/app/components/settings/tabs/GeneralTab";
-import SecurityTab from "@/src/app/components/settings/tabs/SecurityTab";
-import BillingTab from "@/src/app/components/settings/tabs/BillingTab";
-import PersonalizationTab from "@/src/app/components/settings/tabs/PersonalizationTab";
+import {SettingsDialogSidebar} from "@/components/settings/SettingsDialogSidebar";
+import AccountTab from "@/components/settings/tabs/AccountTab";
+import GeneralTab from "@/components/settings/tabs/GeneralTab";
+import SecurityTab from "@/components/settings/tabs/SecurityTab";
+import BillingTab from "@/components/settings/tabs/BillingTab";
+import PersonalizationTab from "@/components/settings/tabs/PersonalizationTab";
 
 type SettingsDialogProps = {
     user: {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import {ReactNode} from "react";
-import {AppSidebar} from "@/src/app/components/sidebar/AppSidebar";
+import {AppSidebar} from "@/components/sidebar/AppSidebar";
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 
 export const metadata: Metadata = {

@@ -4,7 +4,7 @@ import {HelpCircle, ExternalLink, ChevronsUpDown} from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { SETTINGS_TABS } from "./data/index"
+import { SETTINGS_TABS } from "./data"
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 

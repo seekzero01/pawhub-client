@@ -1,7 +1,7 @@
 "use client"
 
 import { useRouter } from "next/navigation";
-import {signOut, useSession} from "@/src/lib/auth-client";
+import {signOut, useSession} from "@/lib/auth-client";
 
 export function UserButton() {
     const { data: session, isPending } = useSession();

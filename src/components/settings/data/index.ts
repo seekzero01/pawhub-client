@@ -5,7 +5,7 @@ import {
     CreditCard,
     Sparkles,
 } from "lucide-react"
-import type { SettingsTab } from "../types/index"
+import type { SettingsTab } from "../types"
 
 export const SETTINGS_TABS: SettingsTab[] = [
     { id: "account", label: "Account", icon: User },

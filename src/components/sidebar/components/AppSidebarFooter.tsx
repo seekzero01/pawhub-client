@@ -3,8 +3,8 @@
 import { SidebarFooter, useSidebar } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import {Activity, useState} from "react";
-import {SettingsDialog} from "@/src/app/components/settings/SettingsDialog";
-import {footerActions} from "@/src/app/components/sidebar/data";
+import {SettingsDialog} from "@/components/settings/SettingsDialog";
+import {footerActions} from "@/components/sidebar/data";
 import {Button} from "@/components/ui/button";
 import {
     Dialog,

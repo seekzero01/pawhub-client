@@ -1,5 +1,5 @@
 import {cookies} from "next/headers";
-import {UserButton} from "@/src/UserButton";
+import {UserButton} from "@/UserButton";
 
 async function getServerSession() {
     const cookieStore = await cookies();
