@@ -1,23 +1,25 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import {Separator} from "@/components/ui/separator";
 
 export default function SecurityTab() {
     return (
-        <div className="max-w-3xl p-5 space-y-10">
-            <div className="w-full max-w-3xl space-y-10">
-                <div>
-                    <h2 className="text-3xl font-bold tracking-tight text-neutral-900 mb-6">
+        <div className="p-6 space-y-10">
+            <div className="flex flex-col justify-center">
+                <div className="mb-6">
+                    <h2 className="text-3xl font-bold tracking-tight text-neutral-900 mb-3">
                         Security
                     </h2>
+
+                    <Separator className="h-px border-[0.5px] border-platinum-border"/>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-3 mb-10">
                     <h3 className="text-lg font-semibold text-neutral-900 pb-2 border-b border-neutral-100">
                         Login & Recovery
                     </h3>
 
-                    {/* Two-Factor Authentication */}
                     <div className="flex items-center justify-between py-1">
                         <div className="space-y-0.5">
                             <span className="text-sm font-medium text-neutral-900 block">
@@ -75,8 +77,7 @@ export default function SecurityTab() {
                     </div>
                 </div>
 
-                {/* Section 2: Login Activity (Overridden Title) */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                     <h3 className="text-lg font-semibold text-neutral-900 pb-2 border-b border-neutral-100">
                         Login Activity
                     </h3>
@@ -102,7 +103,6 @@ export default function SecurityTab() {
                     </div>
                     {/* Activity log records can be mapped here later */}
                 </div>
-
             </div>
         </div>
     )
