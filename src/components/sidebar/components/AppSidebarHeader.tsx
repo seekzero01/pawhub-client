@@ -4,6 +4,8 @@ import { PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import { SidebarHeader, SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import { Tooltip , TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
 import { Kbd } from "@/components/ui/kbd";
+import Image from "next/image";
+import {UserButton} from "@/UserButton";
 
 export const AppSidebarHeader = () => {
     const { state } = useSidebar();
@@ -12,10 +14,9 @@ export const AppSidebarHeader = () => {
     return (
         <SidebarHeader className="flex flex-row items-center justify-between min-h-14">
             {!isCollapsed && (
-                <span className="px-2 font-playfair-display text-lg font-semibold tracking-tight text-graphite-text group-data-[collapsible=icon]:hidden">
-                    Pawhub
-                </span>
+                <div></div>
             )}
+            <UserButton />
             <SidebarTrigger
                 className="p-4 rounded-lg text-deep-plum hover:text-graphite-text hover:bg-platinum-border/30 transition-colors ml-auto"
                 aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}

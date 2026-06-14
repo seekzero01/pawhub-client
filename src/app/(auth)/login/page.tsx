@@ -12,7 +12,7 @@ export default function Page() {
     const [state, action, isPending] = useActionState(handleSignIn, undefined);
 
     return (
-        <AuthCard title="PawHub" subtitle="Log in to your account">
+        <AuthCard title="The intelligent companion for every pet" subtitle="Log in to your PawHub account.">
                 <AuthForm mode="login" state={state} action={action} isPending={isPending} />
                 {/*<OAuthGrid signUpWithAction={signInWith} />*/}
                 <VetButton />

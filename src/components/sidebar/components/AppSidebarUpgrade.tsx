@@ -16,7 +16,7 @@ export const AppSidebarUpgrade = () => {
                 <SidebarMenu className="group-data-[collapsible=icon]:items-center">
                     <SidebarMenuItem>
                         <SidebarMenuButton
-                            className="h-auto w-full flex items-center gap-3 rounded-xl bg-amethyst-accent/20 border border-platinum-border py-3 px-4 hover:bg-amethyst-accent/40 transition-colors group group-data-[collapsible=icon]:bg-transparent group-data-[collapsible=icon]:border-transparent group-data-[collapsible=icon]:p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:hover:bg-transparent"
+                            className="h-auto w-full flex items-center gap-3 rounded-xl bg-amethyst-accent border py-3 px-4 hover:bg-amethyst-accent/80 transition-colors group group-data-[collapsible=icon]:bg-transparent group-data-[collapsible=icon]:border-transparent group-data-[collapsible=icon]:p-0 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:hover:bg-transparent"
                             tooltip="Upgrade to Premium"
                         >
                             <Gem className="h-5 w-5 text-graphite-text p-px" />
