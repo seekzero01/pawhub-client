@@ -1,7 +1,3 @@
-import {Card, CardContent} from "@/components/ui/card";
-import {Calendar, CalendarCheck, CircleCheck, ListFilter, Sun} from "lucide-react";
-import {Badge} from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {DataTable} from "@/app/(main)/dashboard/_components/tasks/data-table";
 import {columns, Task} from "@/app/(main)/dashboard/_components/tasks/columns";
 
@@ -50,7 +46,7 @@ interface TasksProps {
 
 export const Tasks = () => {
     return (
-        <div className="min-w-200">
+        <div className="min-w-180">
             <div className="container mx-auto">
                 <DataTable columns={columns} data={tasks} />
             </div>

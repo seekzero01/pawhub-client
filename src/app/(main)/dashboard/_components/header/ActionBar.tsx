@@ -8,7 +8,7 @@ import {AppSearch} from "@/app/(main)/dashboard/_components/header/AppSearch";
 
 export const ActionBar = () => {
     return (
-        <div className="flex w-full items-center justify-between">
+        <div className="flex w-full items-center justify-between gap-4">
             <AppSearch />
 
             <div className="flex items-center gap-1">
@@ -22,7 +22,6 @@ export const ActionBar = () => {
                     <SquareActivity />
                 </Button>
             </div>
-
         </div>
     )
 }

@@ -23,7 +23,7 @@ export const AppointmentCalendar = ({ date, setDate }: AppointmentCalendarProps)
                 showWeekNumber
                 className="w-full p-0"
                 classNames={{
-                    day: "h-10 w-10 p-0 font-normal aria-selected:opacity-100 rounded-xl hover:bg-slate-100",
+                    day: "h-11.5 w-11.5 p-0 font-normal aria-selected:opacity-100 rounded-xl hover:bg-slate-100",
                 }}
                 weekStartsOn={1}
             />

@@ -85,11 +85,8 @@ export default async function DashboardPage() {
 
     return (
             <div className="w-full max-w-350 mx-auto">
-                <div className="mb-6">
-                    <ActionBar />
-                </div>
-                <div className="flex items-start justify-between w-full">
-                    <div>
+                <div className="grid grid-cols-12 gap-12 items-start w-full">
+                    <div className="col-span-8">
                         <div className="flex flex-col gap-2">
                             <h1 className="text-heading-lg font-bold leading-heading-lg tracking-heading-lg">
                                 <TimeGreeting name={session.user.name}/>
@@ -104,7 +101,7 @@ export default async function DashboardPage() {
                             <Tasks />
                         </div>
                     </div>
-                    <div>
+                    <div className="col-span-4">
                         <UpcomingEvents events={data.appointments} />
                     </div>
                 </div>

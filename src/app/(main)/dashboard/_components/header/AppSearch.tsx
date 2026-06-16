@@ -1,7 +1,5 @@
-import {ButtonGroup} from "@/components/ui/button-group";
 import {Button} from "@/components/ui/button";
 import {SearchIcon} from "lucide-react";
-import { InputGroup, InputGroupInput } from "@/components/ui/input-group";
 import { Input } from "@/components/ui/input";
 
 export const AppSearch = () => {

@@ -32,7 +32,7 @@ export const UpcomingEvents = ({ events }: UpcomingEventsOverviewProps) => {
     }, [])
 
     return (
-        <div className="max-w-350">
+        <div className="max-w-120">
             <AppointmentCalendar date={date} setDate={setDate} />
             <div className="mt-6">
                 <TodayTimeline appointments={events} selectedDate={date} />
