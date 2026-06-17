@@ -10,14 +10,14 @@ interface AuthFormProps {
     isPending: boolean
 }
 
-const inputClass = 'w-full rounded-xl border pl-10 pr-4 py-3 font-inter text-body leading-body tracking-body outline-none placeholder:text-silver-detail transition-colors bg-porcelain-surface'
+const inputClass = 'w-full rounded-xl border border-silver-detail pl-10 pr-4 py-3 font-inter text-body leading-body tracking-body outline-none placeholder:text-silver-detail transition-colors bg-porcelain-surface'
 
 export function AuthForm({ mode, state, action, isPending }: AuthFormProps) {
     return (
         <form action={action} className="flex flex-col gap-4">
             {mode === "signup" && (
                 <div className="flex flex-col gap-1.5">
-                    <label htmlFor="fullName" className="font-inter text-body leading-body tracking-body text-graphite-text">
+                    <label htmlFor="fullName" className="font-inter text-body leading-body tracking-body text-deep-plum">
                         Full Name
                     </label>
                     <div className="relative">
@@ -34,7 +34,7 @@ export function AuthForm({ mode, state, action, isPending }: AuthFormProps) {
                 </div>
             )}
             <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="font-inter text-body leading-body tracking-body text-graphite-text">
+                <label htmlFor="email" className="font-inter text-body leading-body tracking-body text-deep-plum">
                     Email address
                 </label>
                 <div className="relative">
@@ -50,7 +50,7 @@ export function AuthForm({ mode, state, action, isPending }: AuthFormProps) {
                 </div>
             </div>
                 <div className="flex flex-col gap-1.5">
-                    <label htmlFor="password" className="font-inter text-body leading-body tracking-body text-graphite-text">
+                    <label htmlFor="password" className="font-inter text-body leading-body tracking-body text-deep-plum">
                         Password
                     </label>
                     <div className="relative">
