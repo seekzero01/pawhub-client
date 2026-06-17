@@ -5,7 +5,7 @@ import {inter, playfairDisplay} from "@/fonts";
 import {ReactNode} from "react";
 
 export const metadata: Metadata = {
-    title: "My Next.js Application",
+    title: "PawHub - Your intelligent companion",
     description: "Built with Next.js 16",
 };
 

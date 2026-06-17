@@ -1,6 +1,4 @@
 import {cookies} from "next/headers";
-import Link from "next/link";
-import {ActionBar} from "@/app/(main)/dashboard/_components/header/ActionBar";
 import {UpcomingEvents} from "@/app/(main)/dashboard/_components/appointments/upcoming-events";
 import {Tasks} from "@/app/(main)/dashboard/_components/tasks/Tasks";
 import {MedicationSchedule} from "@/app/(main)/dashboard/_components/medications/medication-schedule";
@@ -8,6 +6,7 @@ import {mockMedications} from "@/app/(main)/dashboard/_components/medications/ty
 import {PawBotAssistantCard} from "@/app/(main)/dashboard/_components/ai/paw-bot-assistant-card";
 import {MOCK_PAWBOT_INSIGHT} from "@/app/(main)/dashboard/_components/ai/types";
 import {TimeGreeting} from "@/app/(main)/dashboard/_components/TimeGreeting";
+import {redirect} from "next/navigation";
 
 async function getServerSession() {
     const cookieStore = await cookies();
@@ -46,41 +45,11 @@ async function getDashboardData() {
     }
 }
 
-export interface Pet {
-    id: string
-    name: string
-    avatar_url: string | null
-}
-
-// const MOCK_PETS: Pet[] = [
-//     {
-//         id: "pet_1",
-//         name: "Bella",
-//         avatar_url: "https://placedog.net/100/100?id=1",
-//     },
-//     {
-//         id: "pet_2",
-//         name: "Max",
-//         avatar_url: "https://placedog.net/100/100?id=2",
-//     },
-//     {
-//         id: "pet_3",
-//         name: "Luna",
-//         avatar_url: null,
-//     },
-// ]
-
 export default async function DashboardPage() {
-    const session = await getServerSession();
-    const data = await getDashboardData();
+    const [session, data] = await Promise.all([getServerSession(), getDashboardData()]);
+
     if (!session) {
-        return (
-            <div className="">
-                <h1>Profile (SSR)</h1>
-                <p>Not authenticated. This was checked on the server.</p>
-                <Link href="/login">Sign in</Link>
-            </div>
-        );
+        redirect("/login");
     }
 
     return (
